@@ -1,0 +1,10 @@
+#
+services:
+  kubectl:
+    image: dockerapp/kubectl
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - HOSTOS=darwin
+        - HOSTARCH=arm64
